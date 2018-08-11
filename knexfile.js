@@ -5,9 +5,9 @@ module.exports = {
     client: 'pg',
     connection: {
       host: '127.0.0.1',
-      user: process.env.USER || 'secretvoice',
+      user: process.env.USER || 'secret_user',
       password: process.env.PASSWORD || 'password',
-      database: 'secretvoice',
+      database: 'secret_voice',
       charset: 'utf8'
     },
     migrations: {
