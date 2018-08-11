@@ -11,7 +11,7 @@ module.exports = {
       charset: 'utf8'
     },
     migrations: {
-      directory: __dirname + '/knex/migrations'
+      directory: __dirname + '/db/migrations'
     },
     seeds: {
       directory: __dirname + '/knex/seeds'
