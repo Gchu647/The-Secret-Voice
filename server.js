@@ -6,7 +6,6 @@ const hbs = require('hbs');
 const knex = require('./db/knex');
 const app = express();
 
-const knex = require('./knex/knex.js');
 const PassportStrategy = require('./passport');
 
 const authRoutes = require('./routes/auth');

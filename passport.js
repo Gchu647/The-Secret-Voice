@@ -1,5 +1,5 @@
 const passport = require('passport');
-const knex = require('./knex/knex');
+const knex = require('./db/knex');
 const Strategy = require('passport-local').Strategy;
 
 passport.serializeUser((user, done) => {
