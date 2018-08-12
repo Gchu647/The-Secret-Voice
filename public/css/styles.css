@@ -1,0 +1,19 @@
+/* body {
+  background-color: red;
+} */
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+#logo {
+  width: 200px;
+}
+li {
+  list-style: none;
+  font-size: 35px;
+}
+#navBar {
+  border-bottom: 1px solid grey;
+  height: 70px;
+}
