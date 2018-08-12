@@ -11,19 +11,19 @@ exports.seed = function(knex, Promise) {
         { id: 4, username: 'user4@hotmail.com', password: 'password4' },
         { id: 5, username: 'user5@hotmail.com', password: 'password5' }
       ]);
-    })
-    .then(function() {
-      return knex('content')
-        .del()
-        .then(function() {
-          return knex('content').insert([]);
-        })
-        .then(function() {
-          return knex('likes')
-            .del()
-            .then(function() {
-              return knex('likes').insert([]);
-            });
-        });
     });
+  // .then(function() {
+  //   return knex('content')
+  //     .del()
+  //     .then(function() {
+  //       return knex('content').insert([]);
+  //     })
+  //     .then(function() {
+  //       return knex('likes')
+  //         .del()
+  //         .then(function() {
+  //           return knex('likes').insert([]);
+  //         });
+  //     });
+  // });
 };
