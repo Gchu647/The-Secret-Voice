@@ -1,3 +1,5 @@
+'use strict';
+
 const express = require('express');
 const session = require('express-session');
 const passport = require('passport');
@@ -5,8 +7,6 @@ const fileUpload = require('express-fileupload');
 const bp = require('body-parser');
 const hbs = require('hbs');
 const app = express();
-
-const PassportStrategy = require('./passport');
 
 const authRoutes = require('./routes/auth');
 const songRoutes = require('./routes/song');
@@ -16,6 +16,7 @@ const PORT = process.env.PORT || 8080;
 app.set('view engine', 'hbs');
 
 hbs.registerPartials(__dirname + '/views/partials');
+app.use(express.static('./public'));
 app.use(fileUpload());
 app.use(bp.json());
 app.use(bp.urlencoded({ extended: false }));

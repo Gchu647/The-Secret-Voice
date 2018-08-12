@@ -1,0 +1,123 @@
+html,
+body {
+  font-family: "Libre Baskerville";
+  margin: 0;
+  height: 100%;
+}
+
+button,
+input {
+  font-family: "Libre Baskerville";
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  min-width: 659px;
+  width: 100%;
+  max-width: 960px;
+}
+
+li {
+  font-size: 40px;
+}
+.navB {
+  border-radius: 5px;
+  font-size: 13px;
+  border-top: none;
+  border-left: none;
+  color: #593e36;
+}
+.navB:hover {
+  box-shadow: 0 12px 16px 0 #d9c282, 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+#logo {
+  width: 240px;
+}
+
+#navBar {
+  padding-top: 5px;
+  position: fixed;
+  z-index: 1;
+  height: 250px;
+  width: 100vw;
+  min-width: 659px;
+  background: url(/images/border2.jpg) no-repeat;
+  background-size: contain;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.auth-header {
+  text-align: center;
+  padding-top: 90px;
+}
+
+.auth-form > form {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.auth-form > form > input {
+  margin-bottom: 15px;
+}
+
+.song-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 90px;
+  margin: 30px auto 0;
+  min-width: 540px;
+  max-width: 960px;
+}
+
+.song-container-top {
+  display: flex;
+  flex-direction: row;
+}
+
+.song-container-bottom {
+  align-self: flex-start;
+  padding-left: 20px;
+}
+
+.song-options {
+  display: flex;
+  justify-content: space-between;
+  width: 60px;
+}
+
+.song-username {
+  margin: 25px 0 12.5px;
+}
+
+.song-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.song-image {
+  height: 200px;
+  width: 200px;
+}
