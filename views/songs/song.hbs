@@ -18,9 +18,28 @@
 
   <div class="song-container-bottom">
     <div class="song-options">
-      <i data-feather="thumbs-up"></i>
-      <i data-feather="thumbs-down"></i>
+      <i id="thumbs-up" data-feather="thumbs-up" onclick="changeUp()"></i>
+      <i id="thumbs-down" data-feather="thumbs-down" onclick="changeDown()"></i>
     </div>
   </div>
 
 </div>
+
+<script>
+  function changeUp() {
+    const elem = document.getElementById('thumbs-up')
+    if (elem.style.fill === 'none') {
+      elem.style.fill = '#e3cb82';
+    } else {
+      elem.style.fill = 'none';
+    }
+  }
+  function changeDown() {
+    const elem = document.getElementById('thumbs-down')
+    if (elem.style.fill === 'none') {
+      elem.style.fill = '#e3cb82';
+    } else {
+      elem.style.fill = 'none';
+    }
+  }
+</script>
