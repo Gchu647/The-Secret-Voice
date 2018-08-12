@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const passport = require('passport');
-const knex = require('../knex/knex');
+const knex = require('../db/knex');
 
 router.get('/login', (req, res) => {
   res.render('auth/login');
