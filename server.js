@@ -6,10 +6,6 @@ const bp = require('body-parser');
 const hbs = require('hbs');
 const app = express();
 
-<<<<<<< HEAD
-const knex = require('./db/knex.js');
-=======
->>>>>>> 8ae7efdc86dc1f236ae57bd6c2210d46b179fa26
 const PassportStrategy = require('./passport');
 
 const authRoutes = require('./routes/auth');
