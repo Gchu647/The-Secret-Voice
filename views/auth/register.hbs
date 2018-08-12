@@ -1,19 +1,23 @@
-{{> header}}
+<div class="content">
 
-<h1>Register</h1>
+  {{> header}}
 
-<div class="register">
+  <h1 class="auth-header">Register</h1>
 
-  <form action="/register" method="post">
+  <div class="auth-form">
 
-    <label for="input-username">Username</label>
-    <input type="text" maxlength="255" id="input-username" name="username" required>
+    <form action="/register" method="post">
 
-    <label for="input-password">Password</label>
-    <input type="password" maxlength="255" id="input-password" name="password" required>
+      <label for="input-username">Username</label>
+      <input type="text" id="input-username" name="username" placeholder="Username" required>
 
-    <button class="btn btn-primary" type="submit">Submit</button>
+      <label for="input-password">Password</label>
+      <input type="password" id="input-password" name="password" placeholder="Password" required>
 
-  </form>
+      <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+  </div>
 
 </div>
