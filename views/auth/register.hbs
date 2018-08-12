@@ -1,0 +1,19 @@
+{{> header}}
+
+<h1>Register</h1>
+
+<div class="register">
+
+    <form action="/register" method="post">
+
+        <label for="input-username">Username</label>
+        <input type="text" maxlength="255" id="input-username" name="username" required>
+
+        <label for="input-password">Password</label>
+        <input type="password" maxlength="255" id="input-password" name="password" required>
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+</div>
