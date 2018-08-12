@@ -1,19 +1,33 @@
-/* body {
-  background-color: red;
-} */
+html {
+  height: 100%;
+}
+#container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
 nav ul {
   display: flex;
   justify-content: space-around;
   align-content: center;
+  list-style: none;
 }
 #logo {
   width: 200px;
 }
 li {
-  list-style: none;
-  font-size: 35px;
+  font-size: 40px;
+}
+li:last-child button {
+  background-color: #d9c282;
+  border-radius: 5%;
 }
 #navBar {
   border-bottom: 1px solid grey;
   height: 70px;
+  /* border-image: url("/images/border.jpg") 30; */
+}
+#main {
+  height: 100%;
+  overflow: auto;
 }
