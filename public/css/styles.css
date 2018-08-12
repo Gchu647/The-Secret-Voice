@@ -68,18 +68,3 @@ li {
 .auth-form > form > input {
   margin-bottom: 15px;
 }
-
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top: 1px solid gray;
-}
-
-.footer-inner {
-  display: flex;
-  flex-shrink: 0;
-  margin: 30px auto;
-  min-width: 659px;
-  max-width: 960px;
-}
