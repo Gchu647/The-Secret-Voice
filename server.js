@@ -3,6 +3,7 @@ const session = require('express-session');
 const passport = require('passport');
 const bp = require('body-parser');
 const hbs = require('hbs');
+const knex = require('./db/knex');
 const app = express();
 
 const knex = require('./knex/knex.js');
