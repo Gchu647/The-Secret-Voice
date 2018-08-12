@@ -1,20 +1,36 @@
-html {
+html,
+body {
+  font-family: "Libre Baskerville";
+  margin: 0;
   height: 100%;
 }
-#container {
+
+button,
+input {
+  font-family: "Libre Baskerville";
+}
+
+body {
   display: flex;
-  height: 100%;
   flex-direction: column;
 }
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
 nav ul {
   display: flex;
   justify-content: space-around;
   align-content: center;
   list-style: none;
+  margin: 0;
+  padding-left: 0;
+  min-width: 659px;
+  max-width: 960px;
 }
-#logo {
-  width: 200px;
-}
+
 li {
   font-size: 40px;
 }
@@ -22,12 +38,52 @@ li:last-child button {
   background-color: #d9c282;
   border-radius: 5%;
 }
+
+#logo {
+  width: 200px;
+}
+
 #navBar {
+  position: fixed;
+  z-index: 1;
   border-bottom: 1px solid grey;
   height: 70px;
-  /* border-image: url("/images/border.jpg") 30; */
+  width: 100%;
+  min-width: 659px;
+  background-color: white;
 }
-#main {
-  height: 100%;
-  overflow: auto;
+
+.content {
+  flex: 1 0 auto;
+}
+
+.auth-header {
+  text-align: center;
+  padding-top: 90px;
+}
+
+.auth-form > form {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.auth-form > form > input {
+  margin-bottom: 15px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid gray;
+}
+
+.footer-inner {
+  display: flex;
+  flex-shrink: 0;
+  margin: 30px auto;
+  min-width: 659px;
+  max-width: 960px;
 }

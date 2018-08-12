@@ -25,6 +25,14 @@ server.get('/', (req, res) => {
   res.render('index');
 });
 
+server.get('/login', (req, res) => {
+  res.render('auth/login');
+});
+
+server.get('/register', (req, res) => {
+  res.render('auth/register');
+});
+
 server.listen(PORT, () => {
   console.log(`Server is running on PORT: ${PORT}`);
 });
