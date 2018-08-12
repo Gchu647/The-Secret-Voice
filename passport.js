@@ -3,11 +3,11 @@ const knex = require('./db/knex');
 const Strategy = require('passport-local').Strategy;
 
 passport.serializeUser((user, done) => {
-  done(null, user.id);
+  done(null, user.username);
 });
 
-passport.deserializeUser((userId, done) => {
-  done(null, userId);
+passport.deserializeUser((username, done) => {
+  done(null, username);
 });
 
 passport.use(
