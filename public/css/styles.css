@@ -27,6 +27,7 @@ nav ul {
   margin: 0;
   padding-left: 0;
   min-width: 659px;
+  width: 100%;
   max-width: 960px;
 }
 
