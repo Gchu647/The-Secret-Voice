@@ -25,6 +25,10 @@ server.get('/', (req, res) => {
   res.render('index');
 });
 
+server.get('/songs/:id', (req, res) => {
+  res.render('songs/song');
+});
+
 server.get('/login', (req, res) => {
   res.render('auth/login');
 });
