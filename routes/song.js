@@ -1,10 +1,27 @@
 const router = require('express').Router();
-const passport = require('passport');
-const fs = require('file-system');
 const knex = require('../db/knex');
 
 router.get('/new', (req, res) => {
-  res.render('song');
+  res.render('song-temp');
+});
+
+router.get('/:id', (req, res) => {
+  knex.raw(
+    `SELECT *
+    FROM contents c
+    INNER JOIN users u ON c.user_id = u.id
+    WHERE c.id = ?`, [req.params.id]
+  )
+  .then(song => {
+    console.log(song.rows[0]);
+    // res.send(song.rows);
+    res.render('songs/song', { song: song.rows[0] })
+  })
+  .catch(err => {
+    console.log(err);
+    res.send(err);
+  });
+  // res.render('songs/song');
 });
 
 router.post('/new', (req, res) => {

@@ -4,10 +4,10 @@
 
   <div class="song-container-top">
     <div class="song-container-left">
-      <div class="song-username">Username</div>
-      <div class="song-title">Title</div>
+      <div class="song-username">{{song.username}}</div>
+      <div class="song-title">{{song.title}}</div>
       <audio controls>
-        <source src="../audio/rave_digger.mp3" type="audio/mpeg">
+        <source src="{{song.audio_link}}" type="audio/mpeg">
       </audio>
     </div>
 

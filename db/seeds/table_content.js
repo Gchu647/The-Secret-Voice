@@ -4,24 +4,58 @@ exports.seed = function(knex, Promise) {
     .del()
     .then(function() {
       // Inserts seed entries
-      return knex('users').insert([
-        {id: '1', username: 'user1@hotmail.com', password: 'password1' },
-        {id: '2', username: 'user2@hotmail.com', password: 'password2' },
-        {id: '3', username: 'user3@hotmail.com', password: 'password3' },
-        {id: '4', username: 'user4@hotmail.com', password: 'password4' },
-        {id: '5', username: 'user5@hotmail.com', password: 'password5' }
-      ]);
+      return knex('users').insert(makeUsers());
     })
     .then(function() {
       return knex('contents')
         .del()
         .then(function() {
-          return knex('contents').insert([
-            {category: 'music', title:'Freaky Friday', audio_link:'/db/audios/freaky_friday.mp3', user_id:'1'},
-            {category: 'music', title:'Silence', audio_link:'/db/audios/marsh_silence.mp3', user_id:'2'},
-            {category: 'music', title:'This is America', audio_link:'/db/audios/this_is_amercia.mp3', user_id:'3'}
-          ]);
-        })
+          return knex('contents').insert(makeContent());
+        });
     })
-    .catch( err => { console.log(err.messsage); })
+    .catch(err => {
+      console.log(err.messsage);
+    });
 };
+
+function makeUsers() {
+  let arr = [];
+
+  for (let i = 1; i < 13; i++) {
+    arr.push({
+      id: i,
+      username: `user${i}@hotmail.com`,
+      password: `password${i}`
+    })
+  }
+
+  console.log(arr);
+  return arr;
+}
+
+function makeContent() {
+  let arr = [];
+
+  for (let i = 1; i < 13; i = i + 3) {
+    arr.push({
+      category: 'music',
+      title: 'Freaky Friday',
+      audio_link: '/db/audios/freaky_friday.mp3',
+      user_id: i
+    });
+    arr.push({
+      category: 'music',
+      title: 'Silence',
+      audio_link: '/db/audios/marsh_silence.mp3',
+      user_id: i + 1
+    });
+    arr.push({
+      category: 'music',
+      title: 'This is America',
+      audio_link: '/db/audios/this_is_amercia.mp3',
+      user_id: i + 2
+    });
+  }
+
+  return arr;
+}

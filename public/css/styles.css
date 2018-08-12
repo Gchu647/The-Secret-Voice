@@ -62,12 +62,15 @@ li {
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex: 1 0 auto;
 }
 
 .auth-header {
   text-align: center;
-  padding-top: 90px;
+  padding-top: 120px;
 }
 
 .auth-form > form {
@@ -87,7 +90,7 @@ li {
   justify-content: center;
   align-items: center;
   padding-top: 90px;
-  margin: 30px auto 0;
+  margin: 60px auto 0;
   min-width: 540px;
   max-width: 960px;
 }
@@ -118,6 +121,25 @@ li {
 }
 
 .song-image {
+  height: 200px;
+  width: 200px;
+}
+
+.songs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 200px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.songs-song {
+  margin: 15px 15px 75px;
+}
+
+.songs-song-image {
   height: 200px;
   width: 200px;
 }
