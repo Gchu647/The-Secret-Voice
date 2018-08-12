@@ -1,13 +1,13 @@
 html,
 body {
-  font-family: 'Libre Baskerville';
+  font-family: "Libre Baskerville";
   margin: 0;
   height: 100%;
 }
 
 button,
 input {
-  font-family: 'Libre Baskerville';
+  font-family: "Libre Baskerville";
 }
 
 body {
@@ -24,6 +24,7 @@ nav ul {
   display: flex;
   justify-content: space-around;
   align-content: center;
+  list-style: none;
   margin: 0;
   padding-left: 0;
   min-width: 659px;
@@ -32,22 +33,32 @@ nav ul {
 }
 
 li {
-  list-style: none;
-  font-size: 35px;
+  font-size: 40px;
+}
+.navB {
+  border-radius: 5px;
+  font-size: 13px;
+  border-top: none;
+  border-left: none;
+  color: #593e36;
+}
+.navB:hover {
+  box-shadow: 0 12px 16px 0 #d9c282, 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 #logo {
-  width: 200px;
+  width: 240px;
 }
 
 #navBar {
+  padding-top: 5px;
   position: fixed;
   z-index: 1;
-  border-bottom: 1px solid grey;
-  height: 70px;
-  width: 100%;
+  height: 250px;
+  width: 100vw;
   min-width: 659px;
-  background-color: white;
+  background: url(/images/border2.jpg) no-repeat;
+  background-size: contain;
 }
 
 .content {
@@ -83,6 +94,7 @@ li {
 
 .song-container-top {
   display: flex;
+<<<<<<< HEAD
   flex-direction: row;
 }
 
@@ -110,3 +122,23 @@ li {
   height: 200px;
   width: 200px;
 }
+=======
+  flex-shrink: 0;
+  margin: 30px auto;
+  min-width: 659px;
+  max-width: 960px;
+}
+
+/* body */
+#content {
+  margin: 100px;
+}
+.trendingElm {
+  width: 10px;
+  height: 10px;
+}
+.img {
+  width: 200px;
+  height: 200px;
+}
+>>>>>>> origin/frontend--abby
