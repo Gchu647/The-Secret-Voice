@@ -9,7 +9,9 @@
 </head>
 
 <body>
+    {{!-- method must be post and encType must be multipart/form-data --}}
     <form action="/song/new" method="post" encType='multipart/form-data'>
+        {{!-- this must be type file --}}
         <input type="file" name="song" id="song">
         <button type="submit">add Song</button>
     </form>
