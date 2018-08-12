@@ -72,12 +72,29 @@ li {
 
 .song-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding-top: 90px;
   margin: 30px auto 0;
-  width: 100%;
   min-width: 540px;
   max-width: 960px;
+}
+
+.song-container-top {
+  display: flex;
+  flex-direction: row;
+}
+
+.song-container-bottom {
+  align-self: flex-start;
+  padding-left: 20px;
+}
+
+.song-options {
+  display: flex;
+  justify-content: space-between;
+  width: 60px;
 }
 
 .song-username {
