@@ -4,7 +4,8 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.string('category').notNull();
     table.string('audioLink').notNull();
-    table.integer('user_id').references('users.id')
+    table.integer('user_id').references('users.id');
+    table.integer('likes').notNull().defaultTo(0); // updated column when liked
     table.timestamps(true, true);
   })
 };
